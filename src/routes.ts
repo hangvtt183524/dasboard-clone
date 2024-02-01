@@ -11,7 +11,7 @@ import GetRefCode from '@/containers/eventref/GetRefCode.vue'
 import RoboDAO from '@/containers/eventdao/RoboDAO.vue'
 import DAODetails from '@/containers/eventdao/DAODetails.vue'
 import ComingSoon from './containers/ComingSoon.vue'
-import Ethereum from '@/containers/Ethereum.vue';
+import Ethereum from './containers/Ethereum.vue'
 
 import Vue from "vue";
 import VueRouter from "vue-router";
@@ -56,7 +56,7 @@ const router = new VueRouter({
 // function isHolder(): boolean {
 //     return store.getters["Web3ModuleStore/IsWalletHolder"]
 // }
-
+//
 // router.beforeEach(async (to, _, next) => {
 //     switch (to.name) {
 //         case 'Home':

@@ -1,11 +1,11 @@
 import Onboard from '@/pkg/core'
 import coinbaseWalletModule from "@web3-onboard/coinbase";
-import walletConnectModule from "@web3-onboard/walletconnect";
+// import walletConnectModule from "@web3-onboard/walletconnect";
 import trustModule from '@web3-onboard/trust'
 import rgiModule from '../pkg/rgi-wallet'
 
 const coinbaseWalletSdk = coinbaseWalletModule();
-const walletConnect = walletConnectModule();
+// const walletConnect = walletConnectModule();
 const trustConnect = trustModule();
 const rgiConnect = rgiModule();
 
@@ -31,7 +31,7 @@ const chains = [
 ];
 
 export const web3Onboard = Onboard({
-    wallets: [rgiConnect, walletConnect, coinbaseWalletSdk, trustConnect],
+    wallets: [rgiConnect, coinbaseWalletSdk, trustConnect],
     chains,
     theme: "dark",
     connect: {

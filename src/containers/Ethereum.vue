@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div v-if="window">
-      <div v-for="key in Object.keys(window)" :key="key">
+    <div v-if="windowObject">
+      <div v-for="key in Object.keys(windowObject)" :key="key">
         {{ key }}
       </div>
     </div>
 
-    <div v-if="window?.['ethereum']">
-      <div v-for="key in Object.keys(window['ethereum'])" :key="key">
+    <div v-if="windowObject?.['ethereum']">
+      <div v-for="key in Object.keys(windowObject['ethereum'])" :key="key">
         {{ key }}
       </div>
     </div>
@@ -16,6 +16,13 @@
 
 <script lang="ts">
 export default {
-
+  data() {
+    return {
+      windowObject: undefined
+    }
+  },
+  mounted() {
+    this.windowObject = window;
+  }
 }
 </script>

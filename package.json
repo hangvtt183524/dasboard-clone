@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 3001",
+    "serve": "vue-cli-service serve --port 3000",
     "build": "DEBUG=False && vue-cli-service build --inline-vue",
     "deploy-stag": "aws --region us-east-1 s3 sync ./dist s3://dashboard.roboglobal.info-staging --delete",
     "deploy": "aws --region us-east-1 s3 sync ./dist s3://dashboard.roboglobal.info --delete",
     "cache": "aws cloudfront create-invalidation --distribution-id=E3L46B9MSF3AND --paths '/*'",
     "sentry:ci": "sentry-cli sourcemaps inject --org roboglobal-invesment --project robo-dahboard ./dist && sentry-cli sourcemaps upload --org roboglobal-invesment --project robo-dahboard ./dist"
+
   },
   "dependencies": {
     "@ethersproject/providers": "^5.7.2",
@@ -16,7 +17,6 @@
     "@web3-onboard/coinbase": "^2.2.4",
     "@web3-onboard/injected-wallets": "^2.9.0",
     "@web3-onboard/trust": "^2.0.4",
-    "@web3-onboard/walletconnect": "^2.3.8",
     "axios": "^0.24.0",
     "axios-retry": "^3.2.4",
     "babel-loader": "^8.3.0",
