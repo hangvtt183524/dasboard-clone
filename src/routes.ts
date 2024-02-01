@@ -14,8 +14,8 @@ import ComingSoon from './containers/ComingSoon.vue'
 
 import Vue from "vue";
 import VueRouter from "vue-router";
-import {toastMessage} from "@/lib/toast";
-import store from "@/store";
+// import {toastMessage} from "@/lib/toast";
+// import store from "@/store";
 import EventMigrate from "@/containers/event/EventMigrate.vue";
 
 Vue.use(VueRouter);
@@ -47,42 +47,42 @@ const router = new VueRouter({
     routes
 });
 
-function isAuthenticate(): boolean {
-    return store.getters["Web3ModuleStore/IsLogin"]
-}
+// function isAuthenticate(): boolean {
+//     return store.getters["Web3ModuleStore/IsLogin"]
+// }
+//
+// function isHolder(): boolean {
+//     return store.getters["Web3ModuleStore/IsWalletHolder"]
+// }
 
-function isHolder(): boolean {
-    return store.getters["Web3ModuleStore/IsWalletHolder"]
-}
-
-router.beforeEach(async (to, _, next) => {
-    switch (to.name) {
-        case 'Home':
-        case 'Events':
-            break;
-        case 'Reference':
-            if (isHolder() && isAuthenticate()) {
-                break;
-            }
-            Vue.$toast.open({
-                message: isAuthenticate() ? toastMessage.holder : toastMessage.login,
-                type: "error",
-                position: "top-right",
-                duration: 5000,
-            });
-            return next({name: 'Home'});
-        default:
-            if (!isAuthenticate()) {
-                Vue.$toast.open({
-                    message: toastMessage.login,
-                    type: "error",
-                    position: "top-right",
-                    duration: 5000,
-                });
-                return next({name: 'Home'});
-            }
-            break;
-    }
-    return next();
-});
+// router.beforeEach(async (to, _, next) => {
+//     switch (to.name) {
+//         case 'Home':
+//         case 'Events':
+//             break;
+//         case 'Reference':
+//             if (isHolder() && isAuthenticate()) {
+//                 break;
+//             }
+//             Vue.$toast.open({
+//                 message: isAuthenticate() ? toastMessage.holder : toastMessage.login,
+//                 type: "error",
+//                 position: "top-right",
+//                 duration: 5000,
+//             });
+//             return next({name: 'Home'});
+//         default:
+//             if (!isAuthenticate()) {
+//                 Vue.$toast.open({
+//                     message: toastMessage.login,
+//                     type: "error",
+//                     position: "top-right",
+//                     duration: 5000,
+//                 });
+//                 return next({name: 'Home'});
+//             }
+//             break;
+//     }
+//     return next();
+// });
 export default router
