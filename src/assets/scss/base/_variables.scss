@@ -1,0 +1,99 @@
+$base-color: #E6E6E6;
+$bg-button: linear-gradient(93.21deg, #0096F2 -18.36%, #5B7BFF 35.13%, #4617FF 117.95%, #7AE6F4 147.28%);
+$lg: 992px;
+
+@mixin title {
+  font-family: "Neue Haas Unica Bold";
+  color: #0096F2;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.225em;
+  line-height: 32px;
+
+}
+
+@mixin dao-status {
+  .event-time-block {
+    display: flex;
+    gap: 0 12px;
+    justify-content: flex-end;
+
+    .time-block {
+      width: 210px;
+      height: 32px;
+      border: 1px solid #7AE6F4;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .time-text {
+        font-family: "Neue Haas Unica Medium";
+        font-size: 12px;
+        line-height: 18px;
+        color: #7AE6F4;
+        margin-bottom: 0;
+
+        img {
+          vertical-align: sub;
+        }
+
+        &.end {
+          color: #A0AEC0;
+        }
+
+        &.dao-flg {
+          @media (max-width: 375px) {
+            font-size: .5rem;
+          }
+        }
+      }
+
+      &.end {
+        border: 1px solid rgba(230, 230, 230, 0.25);
+      }
+
+    }
+
+    .btn-size {
+      width: 100px;
+      height: 32px;
+      font-size: 12px;
+      line-height: 18px;
+      font-family: "Neue Haas Unica Medium", serif;
+      color: #FFFFFF;
+
+      &._none {
+        background: #0096F2;
+        border-radius: 100px;
+      }
+
+
+      &._open {
+        background: #1ABC9C;
+        border-radius: 100px;
+      }
+
+      &._expired {
+        background: #ADC0D1;
+        border-radius: 100px;
+        color: #131217;
+      }
+
+
+      &._inProcessing {
+        disable: true;
+        background: #4e4d52;
+        border-radius: 100px;
+      }
+
+      &:hover {
+        border: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+}

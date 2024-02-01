@@ -1,0 +1,179 @@
+.robo-dao-wrapper {
+    .header {
+        .title-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .title {
+                font-family: 'Gotham Bold';
+                font-size: 32px;
+                line-height: 150%;
+                color: #0096F2;
+            }
+
+            .description {
+                font-family: 'Neue Haas Unica Regular';
+                font-size: 14px;
+                line-height: 21px;
+                color: #A0AEC0;
+            }
+
+            .date-text {
+                color: white;
+                font-family: inherit;
+            }
+        }
+
+        .header-bg-dao {
+            background: radial-gradient(53.95% 53.95% at 64.47% 34.21%, rgba(0, 102, 255, 0.5) 0%, rgba(0, 102, 255, 0.29) 100%)
+                /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+            ;
+            box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.1);
+            filter: blur(75px);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            width: 254px;
+            height: 254px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            z-index: -1;
+        }
+    }
+
+    .hot-proposals {
+        .title {
+            font-family: 'Gotham Bold';
+            font-size: 20px;
+            line-height: 32px;
+            color: #FFFFFF;
+        }
+    }
+
+    .proposals {
+        .title {
+            font-family: 'Gotham Bold';
+            font-size: 20px;
+            line-height: 32px;
+            color: #FFFFFF;
+        }
+
+        .key-search {
+            display: flex;
+            gap: 0 16px;
+
+            .item-search {
+                cursor: pointer;
+                min-width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 45px;
+                border: 1px solid rgba(230, 230, 230, 0.25);
+                border-radius: 12px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #FAFAFA;
+                font-family: "Neue Haas Unica Regular";
+
+                &.active {
+                    background: linear-gradient(93.21deg, #0096F2 -18.36%, #5B7BFF 35.13%, #4617FF 117.95%, #7AE6F4 147.28%);
+                    border: 0;
+                }
+            }
+        }
+
+        .search-proposals {
+            width: 270px;
+            height: 45px;
+            border: 1px solid rgba(230, 230, 230, 0.25);
+            border-radius: 12px;
+            background: transparent;
+            padding: 0 16px;
+        }
+
+    }
+
+    .card-info {
+        position: relative;
+
+        @include dao-status;
+
+        .card-vote {
+            margin-top: 16px;
+
+            .bar {
+                background: linear-gradient(93.21deg, rgba(0, 150, 242, 0.1) -18.36%, rgba(91, 123, 255, 0.1) 35.13%, rgba(70, 23, 255, 0.1) 117.95%, rgba(122, 230, 244, 0.1) 147.28%);
+                border-radius: 8px;
+                border: none;
+                height: 30px;
+                position: relative;
+                margin: 0;
+
+                .description {
+                    width: 90%;
+                    position: absolute;
+                    display: flex;
+                    justify-content: space-between;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .text {
+                        margin-bottom: 0;
+                        font-size: 14px;
+                        line-height: 21px;
+                        color: #E6E6E6;
+                        font-family: "Neue Haas Unica Regular";
+
+                        img {
+                            vertical-align: text-bottom;
+                        }
+                    }
+                }
+
+                .bar-fill {
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        .voted-tag {
+            z-index: 1;
+            position: absolute;
+            top: -4px;
+            display: flex;
+
+            .square {
+                border-radius: 5px 0 0 5px;
+                width: 46px;
+                height: 24px;
+                background: #69E2CC;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .text {
+                    margin-bottom: 0;
+                    font-family: "Neue Haas Unica Medium";
+                    font-size: 10px;
+                    line-height: 16px;
+                    color: #000000;
+                }
+            }
+
+            .triangle {
+                width: 0;
+                height: 0;
+                border-left: 0;
+                border-right: 8px solid transparent;
+                border-top: 12px solid #69E2CC;
+                border-bottom: 12px solid #69E2CC;
+            }
+
+        }
+    }
+}

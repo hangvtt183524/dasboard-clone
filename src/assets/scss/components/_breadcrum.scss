@@ -1,0 +1,10 @@
+.btn-bg-trans {
+  background: linear-gradient(#0F0E15 0 0) padding-box, /*this is your grey background*/
+  $bg-button border-box;
+  border: 2px solid transparent;
+  display: inline-block;
+  line-height: 0;
+  &:hover {
+    border: 2px solid transparent !important;
+  }
+}

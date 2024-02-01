@@ -1,0 +1,65 @@
+{
+  "name": "RBIF-Dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --port 3001",
+    "build": "DEBUG=False && vue-cli-service build --inline-vue",
+    "deploy-stag": "aws --region us-east-1 s3 sync ./dist s3://dashboard.roboglobal.info-staging --delete",
+    "deploy": "aws --region us-east-1 s3 sync ./dist s3://dashboard.roboglobal.info --delete",
+    "cache": "aws cloudfront create-invalidation --distribution-id=E3L46B9MSF3AND --paths '/*'",
+    "sentry:ci": "sentry-cli sourcemaps inject --org roboglobal-invesment --project robo-dahboard ./dist && sentry-cli sourcemaps upload --org roboglobal-invesment --project robo-dahboard ./dist"
+  },
+  "dependencies": {
+    "@ethersproject/providers": "^5.7.2",
+    "@sentry/vue": "^7.57.0",
+    "@web3-onboard/coinbase": "^2.2.4",
+    "@web3-onboard/injected-wallets": "^2.9.0",
+    "@web3-onboard/trust": "^2.0.4",
+    "@web3-onboard/walletconnect": "^2.3.8",
+    "axios": "^0.24.0",
+    "axios-retry": "^3.2.4",
+    "babel-loader": "^8.3.0",
+    "bnc-sdk": "^4.6.7",
+    "bowser": "^2.11.0",
+    "buffer": "^6.0.3",
+    "chart.js": "^2.9.4",
+    "core-js": "^3.6.5",
+    "ethers": "^5.5.3",
+    "jwt-simple": "^0.5.6",
+    "lodash.merge": "^4.6.2",
+    "lodash.partition": "^4.6.0",
+    "moment": "^2.29.4",
+    "rxjs": "^7.5.5",
+    "sass": "^1.52.2",
+    "svelte": "^3.49.0",
+    "svelte-i18n": "^3.3.13",
+    "swiper": "^5.4.5",
+    "typescript": "^4.9.5",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "4.1.1",
+    "vue-gtag": "^1.16.1",
+    "vue-router": "^3.5.3",
+    "vue-toast-notification": "^0.6.2",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-typescript": "^4.5.15",
+    "@vue/cli-service": "~4.5.0",
+    "dotenv": "^16.0.3",
+    "sass-loader": "^10.2.1",
+    "style-loader": "^2.0.0",
+    "vue-cli-plugin-typescript": "^0.0.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.46.0"
+  },
+  "peerDependencies": {
+    "css-loader": "3.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

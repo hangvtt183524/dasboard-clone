@@ -1,0 +1,244 @@
+.info-modal-wrapper {
+    overflow: auto;
+    padding: 16px;
+    position: fixed;
+    min-width: 300px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 600px;
+    background: red;
+    z-index: 1036;
+    background: linear-gradient(0deg, rgba(230, 230, 230, 0.1), rgba(230, 230, 230, 0.1)), #131217;
+    border-radius: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+
+    .title {
+        font-family: "Gotham Bold";
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .content {
+
+        //dao vote
+        .ch_body {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+
+            tr {
+                display: flex;
+                justify-content: space-between;
+
+                td {
+                    padding-bottom: 12px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #FFFFFF;
+                    font-family: "Neue Haas Unica Medium";
+
+                    span {
+                        color: #FFFFFF;
+                        font-family: "Neue Haas Unica Medium";
+                    }
+
+                    img {
+                        vertical-align: text-top;
+                    }
+                }
+
+                .address {
+                    display: flex;
+                    align-items: center;
+                    gap: 0 6px;
+                }
+            }
+        }
+
+        //airdrop
+        .claim-content {
+            width: 500px;
+            // width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: justify;
+
+            .text {
+                width: 100%;
+                text-align: left;
+            }
+
+            p {
+                font-family: "Neue Haas Unica Regular";
+            }
+
+            .main-value {
+                display: flex;
+                justify-items: flex-start;
+                align-items: center;
+                gap: 0 16px;
+                position: relative;
+                padding: 8px 16px;
+                margin: 12px 0;
+                width: 100%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 8px;
+                    padding: 1px;
+                    background: linear-gradient(93.21deg, #0096F2 -18.36%, #5B7BFF 35.13%, #4617FF 117.95%, #7AE6F4 147.28%);
+                    -webkit-mask:
+                        linear-gradient(#fff 0 0) content-box,
+                        linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                }
+
+                .title-airdrop {
+                    width: 150px;
+                    margin-bottom: 0;
+                }
+            }
+
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+        }
+
+        .next {
+            p {
+                font-family: "Neue Haas Unica Regular";
+            }
+
+            .highlight {
+                font-family: "Neue Haas Unica Medium";
+            }
+
+            .twit {
+                color: rgba(0, 150, 242, 1);
+                font-family: "Neue Haas Unica Regular";
+                text-decoration: underline;
+            }
+        }
+
+        //confirm-burn-content
+        .icon-burn {
+            position: relative;
+            .bg {
+                z-index: -1;
+                position: absolute;
+                height: 185px;
+                width: 185px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: radial-gradient(53.95% 53.95% at 64.47% 34.21%, rgba(0, 102, 255, 0.5) 0%, rgba(0, 102, 255, 0.29) 100%)
+                    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                ;
+                box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.1);
+                filter: blur(75px);
+            }
+
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        //error
+        .err-content {
+            max-width: 400px;
+            margin-top: -16px;
+            .err {
+                font-size: 20px;
+                line-height: 32px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+
+            .err-text {
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+
+    }
+
+    .footer {
+        .dao-footer {
+            margin-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0 8px;
+
+            .btn-bg-trans {
+                border: 1px solid transparent;
+
+                &:hover {
+                    border: 1px solid transparent !important;
+                }
+            }
+        }
+
+
+        .claim-footer {
+            margin-top: 16px;
+            text-align: center;
+
+            p {
+                font-family: "Neue Haas Unica Regular";
+            }
+
+            .burn-now {
+                color: rgba(0, 150, 242, 1);
+                text-decoration: underline;
+                font-family: "Neue Haas Unica Regular";
+                cursor: pointer;
+            }
+        }
+
+        .err-footer {
+            margin-top: 24px;
+            text-align: center;
+        }
+    }
+}
+
+.modal-background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1034;
+    background: linear-gradient(0deg, rgba(230, 230, 230, 0.1), rgba(230, 230, 230, 0.1)), #131217;
+    opacity: 0.7;
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

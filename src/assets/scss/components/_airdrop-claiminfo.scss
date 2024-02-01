@@ -1,0 +1,25 @@
+//confirm-claim-content
+.confirm-claim-content {
+    background: rgba(26, 188, 156, 0.16);
+    border: 1px solid #1ABC9C;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+
+    .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    p {
+        font-family: "Neue Haas Unica Regular";
+    }
+
+    .value {
+        font-family: "Neue Haas Unica Medium";
+    }
+
+    img {
+        vertical-align: text-top;
+    }
+}

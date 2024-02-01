@@ -1,0 +1,24 @@
+.sidebar-wrapper {
+
+    #sidebar {
+
+        .first-menu {
+            margin-top: 25px;
+
+            ul.submenu > li.active_flg a {
+                background: linear-gradient(93.21deg, #0096F2 -18.36%, #5B7BFF 35.13%, #4617FF 117.95%, #7AE6F4 147.28%);
+                border-radius: 8px;
+                color: #ffffff;
+            }
+
+            .menu-item {
+                // font-family: "Neue Haas Unica Regular";
+                font-size: 16px;
+            }
+        }
+
+        .second-menu{
+            margin-top: 25px;
+        }
+    }
+}

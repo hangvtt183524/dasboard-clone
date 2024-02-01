@@ -1,0 +1,50 @@
+.notification-wrapper {
+    position: fixed;
+    width: 430px;
+    min-height: 100px;
+    max-height: 200px;
+    background: linear-gradient(0deg, rgba(230, 230, 230, 0.02), rgba(230, 230, 230, 0.02)), #131217;
+    border-radius: 8px;
+    z-index: 1036;
+    top: 120px;
+    right: 30px;
+    padding: 12px 24px;
+    display: flex;
+    gap: 0 8px;
+
+    &.success {
+        border: 1px solid #1ABC9C;
+    }
+
+    &.error {
+        border: 1px solid #D33838;
+    }
+
+    .title {
+        font-family: "Gotham Bold";
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    .description {
+        font-family: "Neue Haas Unica Regular";
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(230, 230, 230, 0.8);
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .notification-wrapper {
+        width: 250px;
+        padding: 3px 6px;
+        .title {
+            font-size: .8rem;
+        }
+        .description {
+            font-size: .65rem;
+        }
+    }
+}

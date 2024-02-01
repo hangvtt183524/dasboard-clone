@@ -1,0 +1,151 @@
+*, body {
+  color: $base-color;
+  font-family: "Neue Haas Unica Thin";
+}
+
+body {
+  background-color: #0F0E15;
+}
+
+a {
+  color: $base-color;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.ml-60 {
+  margin-left: 60px;
+}
+
+.ml-64 {
+  margin-left: 64px;
+}
+
+.ml-100 {
+  margin-left: 100px;
+}
+
+.ml-130 {
+  margin-left: 130px;
+}
+
+.mr-100 {
+  margin-right: 100px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mt-48 {
+  margin-top: 48px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+}
+
+.mt-150 {
+  margin-top: 150px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.show {
+  display: block !important;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.button-custom {
+  width: 185px;
+  height: 45px;
+  font-size: 16px !important;
+  border-radius: 50px;
+  line-height: 32px;
+  font-family: "Neue Haas Unica Bold";
+  color: $base-color !important;
+  border: none;
+  &[disabled] {
+    border: none !important;
+  }
+  @media (max-width: 576px) {
+    width: 130px;
+    font-size: 12px !important;
+  }
+  @media (max-width: 370px) {
+    width: 100px;
+    font-size: 10px !important;
+    padding: 0 2px !important;
+  }
+}
+
+.bg-btn {
+  background: $bg-button;
+}
+
+.bg-grandient-black {
+  border: 1px solid rgba(52, 58, 66, 1) !important;
+  background: linear-gradient(180deg, rgba(52, 58, 66, .2) 100%, rgba(0, 0, 0, 0.1) 100%) !important;
+}
+
+._disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+
+.neue-regular {
+  font-family: "Neue Haas Unica Regular";
+}
+
+.neue-medium {
+  font-family: "Neue Haas Unica Medium";
+}
+
+.neue-bold {
+  font-family: "Neue Haas Unica Bold";
+}
+
+.gotham-bold {
+  font-family: "Gotham Bold";
+}
+
+.social {
+  color: rgba(0, 150, 242, 1);
+  font-family: "Neue Haas Unica Regular";
+  text-decoration: underline;
+  &:hover {
+    color: rgba(0, 150, 242, 1);
+    text-decoration: underline;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
